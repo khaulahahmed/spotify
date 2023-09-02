@@ -1,0 +1,51 @@
+export const Recommendations = [
+  {
+    id: 1,
+    title: 'Shape of You',
+    genre: 'Pop',
+    singer: 'Ed Sheeran',
+    imageSource: require('../assets/images/1.jpg'),
+  },
+  {
+    id: 2,
+    title: 'Bohemian Rhapsody',
+    genre: 'Rock',
+    singer: 'Queen',
+    imageSource: require('../assets/images/2.jpg'),
+  },
+  {
+    id: 3,
+    title: 'Sicko Mode',
+    genre: 'Hip Hop',
+    singer: 'Travis Scott',
+    imageSource: require('../assets/images/3.jpg'),
+  },
+  {
+    id: 4,
+    title: 'Strobe',
+    genre: 'Electronic',
+    singer: 'Deadmau5',
+    imageSource: require('../assets/images/4.jpg'),
+  },
+  {
+    id: 5,
+    title: 'Uptown Funk',
+    genre: 'Funk',
+    singer: 'Mark Ronson ft. Bruno Mars',
+    imageSource: require('../assets/images/5.jpg'),
+  },
+  {
+    id: 6,
+    title: 'Someone Like You',
+    genre: 'Pop',
+    singer: 'Adele',
+    imageSource: require('../assets/images/6.jpg'),
+  },
+  {
+    id: 7,
+    title: 'Hotel California',
+    genre: 'Rock',
+    singer: 'Eagles',
+    imageSource: require('../assets/images/7.jpg'),
+  },
+];
