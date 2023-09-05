@@ -12,6 +12,7 @@ import Metrics from '../../theme/Metrics';
 import {premiumList} from '../../data/PremiumList';
 import {COLORS} from '../../theme/Colors';
 import {SlidingDot} from 'react-native-animated-pagination-dots';
+import {Images} from '../../assets/images';
 
 const PremiumHorizontalList = () => {
   const renderPremiumList = ({item}) => (
@@ -29,7 +30,7 @@ const PremiumHorizontalList = () => {
           <TextComponent text={item.free} type="Bold" size={16} color="white" />
         </Text>
       </View>
-      <ImageBackground source={require('../../assets/images/green.png')}>
+      <ImageBackground source={Images.greenBackground}>
         <View style={styles.rightBox}>
           <Text style={styles.text1}>
             <TextComponent

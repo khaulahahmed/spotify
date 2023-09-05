@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, View, Image} from 'react-native';
 import Metrics from '../../theme/Metrics';
 import TextComponent from '../Text/TextComponent';
+import {Images} from '../../assets/images';
 
 const ProfileContainer = () => {
   const userName = 'Khaulah Ahmed ';
@@ -9,7 +10,7 @@ const ProfileContainer = () => {
   return (
     <View style={styles.profileContainer}>
       <Image
-        source={require('../../assets/images/profile-user.png')}
+        source={Images.profile_user}
         style={{
           height: Metrics.scale(60),
           width: Metrics.scale(60),

@@ -7,6 +7,7 @@ import Modal from 'react-native-modal';
 import Metrics from '../../theme/Metrics';
 import AddArtistModal from '../LibraryScreen/AddArtistModal';
 import TextComponent from '../Text/TextComponent';
+import {Icons} from '../../assets/icons';
 
 const AddArtist = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -27,7 +28,7 @@ const AddArtist = () => {
         <View style={styles.ModalView}>
           <ScrollView>
             <Pressable onPress={() => setModalVisible(!modalVisible)}>
-              <Image source={require('../../assets/icons/close.png')} />
+              <Image source={Icons.close} />
             </Pressable>
             <AddArtistModal />
           </ScrollView>
@@ -51,10 +52,7 @@ const AddArtist = () => {
 
       <View style={styles.box}>
         <Pressable onPress={() => setModalVisible(!modalVisible)}>
-          <Image
-            source={require('../../assets/icons/add.png')}
-            style={styles.image}
-          />
+          <Image source={Icons.add} style={styles.image} />
         </Pressable>
         <View style={styles.textStyles}>
           <TextComponent

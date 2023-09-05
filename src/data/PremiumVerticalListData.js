@@ -1,10 +1,12 @@
+import {Images} from '../assets/images';
+
 export const premiumListData = [
   {
     id: 1,
     tag: 'FREE FOR 3 MONTHS',
     title: 'Premium Individual',
     text: '3 months of Premium for free . Ad-free music listening . Download to listen offline . Playsongs in any order . Higher sound quality . Cancel anytime',
-    imageSource: require('../assets/images/green.png'),
+    imageSource: Images.greenBackground,
   },
 
   {
@@ -12,7 +14,7 @@ export const premiumListData = [
     tag: 'FREE FOR 1 MONTH',
     title: 'Premium Student',
     text: '3 months of Premium for free . Ad-free music listening . Download to listen offline . Playsongs in any order . Higher sound quality . Cancel anytime',
-    imageSource: require('../assets/images/orange.png'),
+    imageSource: Images.orangeBackground,
   },
 
   {
@@ -20,7 +22,7 @@ export const premiumListData = [
     tag: 'FREE FOR 1 MONTH',
     title: 'Premium Duo',
     text: '3 months of Premium for free . Ad-free music listening . Download to listen offline . Playsongs in any order . Higher sound quality . Cancel anytime',
-    imageSource: require('../assets/images/purple.png'),
+    imageSource: Images.purpleBackground,
   },
 
   {
@@ -28,6 +30,6 @@ export const premiumListData = [
     tag: 'FREE FOR 1 MONTH',
     title: 'Premium Family',
     text: '3 months of Premium for free . Ad-free music listening . Download to listen offline . Playsongs in any order . Higher sound quality . Cancel anytime',
-    imageSource: require('../assets/images/blue.png'),
+    imageSource: Images.blueBackground,
   },
 ];

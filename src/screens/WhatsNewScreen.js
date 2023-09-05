@@ -1,10 +1,11 @@
 import React from 'react';
+import {FlatList, Image, StyleSheet, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import TextComponent from '../components/Text/TextComponent';
+import {NewSongsData} from '../data/NewSongs';
 import {COLORS} from '../theme/Colors';
 import Metrics from '../theme/Metrics';
-import {FlatList, Image, StyleSheet, View, Dimensions} from 'react-native';
-import {NewSongsData} from '../data/NewSongs';
+import {Icons} from '../assets/icons';
 
 const WhatsNewScreen = () => {
   renderNewItems = ({item}) => (
@@ -32,10 +33,7 @@ const WhatsNewScreen = () => {
           />
         </View>
         <View style={{justifyContent: 'center'}}>
-          <Image
-            source={require('../assets/icons/play-button.png')}
-            style={styles.iconStyle}
-          />
+          <Image source={Icons.playButton} style={styles.iconStyle} />
         </View>
       </View>
     </View>
@@ -64,6 +62,7 @@ const WhatsNewScreen = () => {
         data={NewSongsData}
         keyExtractor={item => item.id}
         renderItem={renderNewItems}
+        contentContainerStyle={{paddingBottom: Metrics.screenHeight * 0.15}}
       />
       {/* </View> */}
     </View>
@@ -75,6 +74,7 @@ export default WhatsNewScreen;
 const styles = StyleSheet.create({
   rootContainer: {
     padding: Metrics.scale(10),
+    // marginBottom: Metrics.screenHeight * 0.2,
   },
   button: {
     backgroundColor: COLORS.GREY_BLACK,

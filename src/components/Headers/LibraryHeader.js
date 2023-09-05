@@ -2,14 +2,12 @@ import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import TextComponent from '../Text/TextComponent';
 import Metrics from '../../theme/Metrics';
+import {Icons} from '../../assets/icons';
 
 function LibraryHeader() {
   return (
     <View style={styles.heading}>
-      <Image
-        source={require('../../assets/icons/profile.png')}
-        style={styles.profileIcon}
-      />
+      <Image source={Icons.profileIcon} style={styles.profileIcon} />
       <TextComponent
         text={'Your Library'}
         type="ExtraBold"
@@ -17,14 +15,8 @@ function LibraryHeader() {
         color="white"
       />
       <View style={styles.headerIcons}>
-        <Image
-          source={require('../../assets/icons/search_white.png')}
-          style={styles.searchIcon}
-        />
-        <Image
-          source={require('../../assets/icons/plus.png')}
-          style={styles.plusIcon}
-        />
+        <Image source={Icons.search_white} style={styles.searchIcon} />
+        <Image source={Icons.plus} style={styles.plusIcon} />
       </View>
     </View>
   );

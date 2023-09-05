@@ -5,6 +5,7 @@ import Metrics from '../theme/Metrics';
 import TextInputComponent from '../components/TextInput/TextInputComponent';
 import {browsingData} from '../data/BrowsingData';
 import BrowsingList from '../components/List/BrowsingList';
+import {Icons} from '../assets/icons';
 
 const SearchScreen = () => {
   return (
@@ -16,10 +17,7 @@ const SearchScreen = () => {
           size={20}
           color="white"
         />
-        <Image
-          source={require('../assets/icons/camerax2.png')}
-          style={styles.image}
-        />
+        <Image source={Icons.camera2} style={styles.image} />
       </View>
       <TextInputComponent children={'What do you want to listen to?'} />
       <View style={{marginHorizontal: Metrics.scale(15)}}>

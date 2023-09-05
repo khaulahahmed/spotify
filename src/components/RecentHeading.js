@@ -2,14 +2,12 @@ import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import TextComponent from './Text/TextComponent';
 import Metrics from '../theme/Metrics';
+import {Icons} from '../assets/icons';
 
 function RecentHeading() {
   return (
     <View style={styles.subheadingContainer}>
-      <Image
-        source={require('../assets/icons/recents.png')}
-        style={styles.recentsIcon}
-      />
+      <Image source={Icons.recents} style={styles.recentsIcon} />
       <TextComponent
         text={'Recents'}
         type="ExtraBold"
@@ -17,10 +15,7 @@ function RecentHeading() {
         color="white"
       />
       <View style={styles.thumbnail}>
-        <Image
-          source={require('../assets/icons/thumbnail.png')}
-          style={styles.thumbnailIcon}
-        />
+        <Image source={Icons.thumbnail} style={styles.thumbnailIcon} />
       </View>
     </View>
   );

@@ -1,73 +1,75 @@
+import {Images} from '../assets/images';
+
 export const artistsData = [
   {
     id: '1',
     title: 'Mitraz',
-    imageSource: require('../assets/images/1.jpg'),
+    imageSource: Images.image1,
   },
   {
     id: '2',
     title: 'Vismay Patel',
-    imageSource: require('../assets/images/2.jpg'),
+    imageSource: Images.image2,
   },
   {
     id: '3',
     title: 'Rahul Jain',
-    imageSource: require('../assets/images/3.jpg'),
+    imageSource: Images.image3,
   },
   {
     id: '4',
 
     title: 'Twin Strings',
-    imageSource: require('../assets/images/4.jpg'),
+    imageSource: Images.image4,
   },
   {
     id: '5',
     title: 'Shirley Setia',
-    imageSource: require('../assets/images/5.jpg'),
+    imageSource: Images.image5,
   },
   {
     id: '6',
     title: 'Jubin Nautiyal',
-    imageSource: require('../assets/images/6.jpg'),
+    imageSource: Images.image6,
   },
   {
     id: '7',
     title: 'Arijit Singh',
-    imageSource: require('../assets/images/7.jpg'),
+    imageSource: Images.image7,
   },
   {
     id: '8',
     title: 'Armaan Malik',
-    imageSource: require('../assets/images/1.jpg'),
+    imageSource: Images.image1,
   },
   {
     id: '9',
     title: 'Neha Kakkar',
-    imageSource: require('../assets/images/2.jpg'),
+    imageSource: Images.image2,
   },
   {
     id: '10',
     title: 'Darshan Raval',
-    imageSource: require('../assets/images/3.jpg'),
+    imageSource: Images.image3,
   },
   {
     id: '11',
     title: 'Atif Aslam',
-    imageSource: require('../assets/images/4.jpg'),
+    imageSource: Images.image4,
   },
   {
     id: '12',
     title: 'A.R. Rahman',
-    imageSource: require('../assets/images/5.jpg'),
+    imageSource: Images.image5,
   },
   {
     id: '13',
     title: 'Taylor Swift',
-    imageSource: require('../assets/images/6.jpg'),
+    imageSource: Images.image6,
   },
   {
     id: '14',
     title: 'Justin Bieber',
-    imageSource: require('../assets/images/7.jpg'),
+    imageSource: Images.image7,
   },
 ];

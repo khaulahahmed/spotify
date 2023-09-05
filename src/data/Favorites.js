@@ -1,22 +1,24 @@
+import {Images} from '../assets/images';
+
 export const Favorites = [
   {
     id: 1,
     title: 'Daily Mix 1',
-    imageSource: require('../assets/images/DailyMix.jpg'),
+    imageSource: Images.DailyMix,
   },
   {
     id: 2,
     title: 'Mitraz',
-    imageSource: require('../assets/images/Mitraz.jpg'),
+    imageSource: Images.Mitraz,
   },
   {
     id: 3,
     title: 'Shaadi Mix',
-    imageSource: require('../assets/images/ShaadiMix.jpg'),
+    imageSource: Images.ShaadiMix,
   },
   {
     id: 4,
     title: 'Top Hits Hindi',
-    imageSource: require('../assets/images/TopHits.jpg'),
+    imageSource: Images.TopHits,
   },
 ];

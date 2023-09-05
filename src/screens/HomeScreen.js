@@ -8,6 +8,7 @@ import recentlyPlayed from '../data/RecentlyPlayed';
 import {popularAlbums} from '../data/PopularAlbums';
 import {Pressable} from '@react-native-material/core';
 import {useNavigation} from '@react-navigation/native';
+import {Icons} from '../assets/icons';
 
 function HomeScreen() {
   const userName = 'Khaulah Ahmed ';
@@ -24,11 +25,11 @@ function HomeScreen() {
           />
           <View style={styles.headerIcons}>
             <Pressable onPress={() => navigate.navigate('WhatsNewScreen')}>
-              <Image source={require('../assets/icons/bell.png')} />
+              <Image source={Icons.bell} />
             </Pressable>
-            <Image source={require('../assets/icons/recent.png')} />
+            <Image source={Icons.recent} />
             <Pressable onPress={() => navigate.navigate('settings')}>
-              <Image source={require('../assets/icons/setting.png')} />
+              <Image source={Icons.setting} />
             </Pressable>
           </View>
         </View>

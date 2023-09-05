@@ -1,14 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, TextInput, Image, View} from 'react-native';
 import Metrics from '../../theme/Metrics';
+import {Icons} from '../../assets/icons';
 
 function TextInputComponent({children}) {
   return (
     <View style={styles.textInputContainer}>
-      <Image
-        source={require('../../assets/icons/search.png')}
-        style={styles.icon}
-      />
+      <Image source={Icons.search} style={styles.icon} />
       <TextInput style={styles.textInput} placeholder={children} />
     </View>
   );

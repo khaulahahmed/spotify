@@ -8,6 +8,7 @@ import RecentHeading from '../components/RecentHeading';
 import TextComponent from '../components/Text/TextComponent';
 import {COLORS} from '../theme/Colors';
 import Metrics from '../theme/Metrics';
+import {Icons} from '../assets/icons';
 
 function YourLibraryScreen() {
   const numberOfSongs = 2;
@@ -34,7 +35,7 @@ function YourLibraryScreen() {
             start={{x: 0, y: 0}}
             end={{x: 1, y: 1}}
             style={styles.boxContainer}>
-            <Image source={require('../assets/icons/favorite.png')} />
+            <Image source={Icons.favorite} />
           </LinearGradient>
         </View>
         <View style={styles.textStyles}>

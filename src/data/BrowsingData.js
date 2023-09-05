@@ -1,73 +1,75 @@
+import {Images} from '../assets/images';
+
 export const browsingData = [
   {
     id: '1',
     title: 'Live Events',
-    imageSource: require('../assets/images/1.jpg'),
+    imageSource: Images.image1,
   },
   {
     id: '2',
     title: 'Made for you',
-    imageSource: require('../assets/images/2.jpg'),
+    imageSource: Images.image2,
   },
   {
     id: '3',
     title: 'New Releases',
-    imageSource: require('../assets/images/3.jpg'),
+    imageSource: Images.image3,
   },
   {
     id: '4',
 
     title: 'Desi',
-    imageSource: require('../assets/images/4.jpg'),
+    imageSource: Images.image4,
   },
   {
     id: '5',
     title: 'Pop',
-    imageSource: require('../assets/images/5.jpg'),
+    imageSource: Images.image5,
   },
   {
     id: '6',
     title: 'Hip-Hop',
-    imageSource: require('../assets/images/6.jpg'),
+    imageSource: Images.image6,
   },
   {
     id: '7',
     title: 'Punjabi',
-    imageSource: require('../assets/images/7.jpg'),
+    imageSource: Images.image7,
   },
   {
     id: '8',
     title: 'Bollywood',
-    imageSource: require('../assets/images/1.jpg'),
+    imageSource: Images.image1,
   },
   {
     id: '9',
     title: 'Charts',
-    imageSource: require('../assets/images/2.jpg'),
+    imageSource: Images.image2,
   },
   {
     id: '10',
     title: 'Equal',
-    imageSource: require('../assets/images/3.jpg'),
+    imageSource: Images.image3,
   },
   {
     id: '11',
     title: 'Discover',
-    imageSource: require('../assets/images/4.jpg'),
+    imageSource: Images.image4,
   },
   {
     id: '12',
     title: 'Radio',
-    imageSource: require('../assets/images/5.jpg'),
+    imageSource: Images.image5,
   },
   {
     id: '13',
     title: 'K-pop',
-    imageSource: require('../assets/images/6.jpg'),
+    imageSource: Images.image6,
   },
   {
     id: '14',
     title: 'Party',
-    imageSource: require('../assets/images/7.jpg'),
+    imageSource: Images.image7,
   },
 ];

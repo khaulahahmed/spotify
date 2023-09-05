@@ -6,6 +6,7 @@ import {COLORS} from '../theme/Colors';
 import {LoginOptionsData} from '../data/LoginOptions';
 import {Pressable} from '@react-native-material/core';
 import {useNavigation} from '@react-navigation/native';
+import {Logo} from '../assets/logo';
 
 const LogInScreen = () => {
   const navigate = useNavigation();
@@ -24,10 +25,7 @@ const LogInScreen = () => {
 
   return (
     <View style={styles.rootContainer}>
-      <Image
-        source={require('../assets/logo/spotifyx2.png')}
-        style={{margin: Metrics.scale(15)}}
-      />
+      <Image source={Logo.SPOTIFYx2} style={{margin: Metrics.scale(15)}} />
       <TextComponent
         text={'Millions of songs. \n Free on Spotify'}
         type="ExtraBold"

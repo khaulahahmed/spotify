@@ -7,6 +7,7 @@ import SearchScreen from '../screens/SearchScreen';
 import YourLibraryScreen from '../screens/YourLibraryScreen';
 import {COLORS} from '../theme/Colors';
 import Metrics from '../theme/Metrics';
+import {Icons} from '../assets/icons';
 const {Navigator, Screen} = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
@@ -36,7 +37,7 @@ const BottomTabNavigator = () => {
           tabBarLabel: 'Home',
           tabBarIcon: ({focused}) => (
             <Image
-              source={require('../assets/icons/homepage.png')}
+              source={Icons.homepage}
               style={{
                 width: 20,
                 height: 20,
@@ -53,7 +54,7 @@ const BottomTabNavigator = () => {
           tabBarLabel: 'Search',
           tabBarIcon: ({focused}) => (
             <Image
-              source={require('../assets/icons/search.png')}
+              source={Icons.search}
               style={{
                 width: 20,
                 height: 20,
@@ -70,7 +71,7 @@ const BottomTabNavigator = () => {
           tabBarLabel: 'Your Library',
           tabBarIcon: ({focused}) => (
             <Image
-              source={require('../assets/icons/library.png')}
+              source={Icons.library}
               style={{
                 width: 20,
                 height: 20,
@@ -87,7 +88,7 @@ const BottomTabNavigator = () => {
           tabBarLabel: 'Premium',
           tabBarIcon: ({focused}) => (
             <Image
-              source={require('../assets/icons/spotify.png')}
+              source={Icons.spotify}
               style={{
                 width: 20,
                 height: 20,

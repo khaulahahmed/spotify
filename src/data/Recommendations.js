@@ -1,51 +1,53 @@
+import {Images} from '../assets/images';
+
 export const Recommendations = [
   {
     id: 1,
     title: 'Shape of You',
     genre: 'Pop',
     singer: 'Ed Sheeran',
-    imageSource: require('../assets/images/1.jpg'),
+    imageSource: Images.image1,
   },
   {
     id: 2,
     title: 'Bohemian Rhapsody',
     genre: 'Rock',
     singer: 'Queen',
-    imageSource: require('../assets/images/2.jpg'),
+    imageSource: Images.image2,
   },
   {
     id: 3,
     title: 'Sicko Mode',
     genre: 'Hip Hop',
     singer: 'Travis Scott',
-    imageSource: require('../assets/images/3.jpg'),
+    imageSource: Images.image3,
   },
   {
     id: 4,
     title: 'Strobe',
     genre: 'Electronic',
     singer: 'Deadmau5',
-    imageSource: require('../assets/images/4.jpg'),
+    imageSource: Images.image4,
   },
   {
     id: 5,
     title: 'Uptown Funk',
     genre: 'Funk',
     singer: 'Mark Ronson ft. Bruno Mars',
-    imageSource: require('../assets/images/5.jpg'),
+    imageSource: Images.image5,
   },
   {
     id: 6,
     title: 'Someone Like You',
     genre: 'Pop',
     singer: 'Adele',
-    imageSource: require('../assets/images/6.jpg'),
+    imageSource: Images.image6,
   },
   {
     id: 7,
     title: 'Hotel California',
     genre: 'Rock',
     singer: 'Eagles',
-    imageSource: require('../assets/images/7.jpg'),
+    imageSource: Images.image7,
   },
 ];
