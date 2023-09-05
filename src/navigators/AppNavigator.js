@@ -3,6 +3,8 @@ import React from 'react';
 import SettingsScreen from '../screens/SettingsScreen';
 import {COLORS} from '../theme/Colors';
 import BottomTabNavigator from './BottomTabNavigator';
+import LogInScreen from '../screens/LogInScreen';
+import HomeScreen from '../screens/HomeScreen';
 
 const {Navigator, Screen} = createStackNavigator();
 
@@ -35,6 +37,21 @@ const AppNavigator = () => {
             color: 'white',
           },
           headerTintColor: 'white',
+        }}
+      />
+
+      <Screen
+        name="LogInScreen"
+        component={LogInScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{
+          headerShown: false,
         }}
       />
     </Navigator>

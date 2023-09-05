@@ -1,5 +1,4 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {Image} from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
@@ -41,7 +40,7 @@ const BottomTabNavigator = () => {
               style={{
                 width: 20,
                 height: 20,
-                tintColor: focused ? 'white' : '##C4C4C4',
+                tintColor: focused ? 'white' : '#C4C4C4',
               }}
             />
           ),

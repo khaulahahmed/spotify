@@ -1,0 +1,18 @@
+export const Icons = {
+  Add: require('./add.png'),
+  Bell: require('./bell.png'),
+  camera: require('./camera.png'),
+  camera2: require('./camera2.png'),
+  favorite: require('./favorite.png'),
+  homepage: require('./homepage.png'),
+  library: require('./library.png'),
+  plus: require('./plus.png'),
+  profile: require('./profile.png'),
+  search: require('./search.png'),
+  setting: require('./setting.png'),
+  recent: require('./recent.png'),
+  recents: require('./recents.png'),
+  search_white: require('./search_white.png'),
+  spotify: require('./spotify.png'),
+  thumbnail: require('./thumbnail.png'),
+};

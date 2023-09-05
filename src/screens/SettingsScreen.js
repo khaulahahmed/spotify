@@ -1,46 +1,55 @@
-import {React, useLayoutEffect} from 'react';
-import {View, StyleSheet, Image} from 'react-native';
-import Metrics from '../theme/Metrics';
-import {Text} from '@react-native-material/core';
+import {React} from 'react';
+import {FlatList, Image, StyleSheet, View} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
+import LogoutButton from '../components/Buttons/LogoutButton';
+import ProfileContainer from '../components/SettingsScreen/ProfileContainer';
 import TextComponent from '../components/Text/TextComponent';
+import {settingOptionsData} from '../data/SettingOptionsData';
+import Metrics from '../theme/Metrics';
 
-const settingsScreen = () => {
-  const userName = 'Khaulah Ahmed ';
+const SettingsScreen = () => {
+  const renderSettingOption = ({item}) => (
+    <View style={styles.optionContainer}>
+      <TextComponent
+        text={item.title}
+        type="SemiBold"
+        size={14}
+        color="white"
+      />
+      <Image source={item.icon} />
+    </View>
+  );
 
-  useLayoutEffect(() => {
-    <View style={styles.rootContainer}></View>;
-  });
+  // const handleModal = () => setModalVisible(() => !modalVisible);
 
   return (
-    <View style={styles.rootContainer}>
-      <View style={styles.profileContainer}>
-        <Image
-          source={require('../assets/images/profile-user.png')}
-          style={{
-            height: Metrics.scale(60),
-            width: Metrics.scale(60),
-          }}
-        />
-        <View>
-          <TextComponent text={userName} type="Bold" size={18} color="white" />
-          <TextComponent text={'View Profile'} type="SemiBold" size={14} />
-        </View>
-        <View></View>
-      </View>
-    </View>
+    <ScrollView style={styles.rootContainer}>
+      <ProfileContainer />
+
+      <FlatList
+        data={settingOptionsData}
+        keyExtractor={item => item.id}
+        renderItem={renderSettingOption}
+      />
+
+      <LogoutButton />
+    </ScrollView>
   );
 };
 
-export default settingsScreen;
+export default SettingsScreen;
 
 const styles = StyleSheet.create({
   rootContainer: {
-    flex: 1,
+    flexGrow: 1,
     padding: Metrics.scale(30),
+    marginBottom: Metrics.scale(30),
   },
-  profileContainer: {
-    flex: 1,
+  optionContainer: {
     flexDirection: 'row',
-    // margin: Metrics.scale(10),
+    width: Metrics.screenWidth * 0.87,
+    justifyContent: 'space-between',
+    marginVertical: Metrics.scale(13),
+    height: Metrics.scale(40),
   },
 });
