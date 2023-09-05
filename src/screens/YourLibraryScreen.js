@@ -1,48 +1,29 @@
 import React from 'react';
-import {
-  FlatList,
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  Dimensions,
-  Button,
-} from 'react-native';
-import TextComponent from '../components/Text/TextComponent';
-import Metrics from '../theme/Metrics';
+import {Image, StyleSheet, View} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import LinearGradient from 'react-native-linear-gradient';
+import AddArtist from '../components/Buttons/AddArtist';
 import LibraryHeader from '../components/Headers/LibraryHeader';
 import RecentHeading from '../components/RecentHeading';
-import {Favorites} from '../data/Favorites';
+import TextComponent from '../components/Text/TextComponent';
 import {COLORS} from '../theme/Colors';
-import FavoritesList from '../components/List/FavoritesList';
-import LibraryList from '../components/List/LibraryList';
-import LinearGradient from 'react-native-linear-gradient';
+import Metrics from '../theme/Metrics';
 
 function YourLibraryScreen() {
   const numberOfSongs = 2;
-  const renderLikedItems = ({item}) => {
-    <View style={styles.box}>
-      <Image source={item.imageSource} style={styles.image} />
-      <View style={styles.textStyles}>
-        <TextComponent
-          text={item.title}
-          type="ExtraBold"
-          size={Metrics.scale(13)}
-          color="white"
-        />
-      </View>
-    </View>;
-  };
 
   return (
     <View style={styles.rootContainer}>
       <LibraryHeader />
       <View style={styles.button}>
-        <Button
-          style={styles.button}
-          color={COLORS.GREY_BLACK}
-          title="Playlists"
-        />
+        <TouchableOpacity style={styles.button} title="playlists">
+          <TextComponent
+            text={'PLAYLISTS'}
+            type={'SemiBold'}
+            size={12}
+            color={'white'}
+          />
+        </TouchableOpacity>
       </View>
 
       <RecentHeading />
@@ -81,21 +62,7 @@ function YourLibraryScreen() {
         </View>
       </View>
 
-      <View style={styles.box}>
-        <Image
-          source={require('../assets/icons/add.png')}
-          style={styles.image}
-        />
-        <View style={styles.textStyles}>
-          <TextComponent
-            text={'Add artists'}
-            type="Regular"
-            size={Metrics.scale(13)}
-            color="white"
-          />
-        </View>
-      </View>
-      {/* <LibraryList /> */}
+      <AddArtist />
     </View>
   );
 }
@@ -115,37 +82,33 @@ const styles = StyleSheet.create({
     color: COLORS.LIGHT_GREY,
     borderRadius: Metrics.scale(30),
     width: Metrics.screenWidth * 0.3,
+    height: Metrics.scale(40),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   textStyles: {
-    marginHorizontal: Metrics.scale(35),
-    marginTop: Metrics.scale(20),
+    marginHorizontal: Metrics.scale(25),
+    // marginTop: Metrics.scale(20),
     flexDirection: 'column',
-    // justifyContent: 'center',
-    // verticalAlign: 'center',
   },
   box: {
-    // flex: 1,
     flexDirection: 'row',
     margin: Metrics.scale(4),
-    // height: Metrics.scale(20),
-    // backgroundColor: COLORS.DARKER_GREY,
     justifyContent: 'flex-start',
     alignItems: 'center',
     height: Metrics.scale(80),
     borderRadius: Metrics.scale(9),
     marginBottom: Metrics.scale(20),
-    // height: Metrics.scale(20),
   },
   boxContainer: {
     width: Metrics.scale(80),
     height: Metrics.scale(80),
     justifyContent: 'center',
     alignItems: 'center',
-    // borderRadius: 10,
   },
   image: {
-    width: 70,
+    width: Metrics.scale(70),
     height: Metrics.scale(70),
     borderRadius: Metrics.scale(40),
   },

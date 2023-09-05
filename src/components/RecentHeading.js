@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
   subheadingContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginTop: Metrics.scale(25),
   },
   recentsIcon: {
     width: Metrics.scale(17),

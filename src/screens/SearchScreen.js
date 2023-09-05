@@ -2,7 +2,7 @@ import React from 'react';
 import {FlatList, Image, ImageBackground, StyleSheet, View} from 'react-native';
 import TextComponent from '../components/Text/TextComponent';
 import Metrics from '../theme/Metrics';
-import TextInputComponent from '../components/TextInput.js/TextInputComponent';
+import TextInputComponent from '../components/TextInput/TextInputComponent';
 import {browsingData} from '../data/BrowsingData';
 import BrowsingList from '../components/List/BrowsingList';
 
@@ -21,7 +21,7 @@ const SearchScreen = () => {
           style={styles.image}
         />
       </View>
-      <TextInputComponent />
+      <TextInputComponent children={'What do you want to listen to?'} />
       <View style={{marginHorizontal: Metrics.scale(15)}}>
         <TextComponent
           text={'Browse All'}

@@ -2,17 +2,14 @@ import React from 'react';
 import {StyleSheet, Text, TextInput, Image, View} from 'react-native';
 import Metrics from '../../theme/Metrics';
 
-function TextInputComponent() {
+function TextInputComponent({children}) {
   return (
     <View style={styles.textInputContainer}>
       <Image
         source={require('../../assets/icons/search.png')}
         style={styles.icon}
       />
-      <TextInput
-        style={styles.textInput}
-        placeholder="What do you want to listen to?"
-      />
+      <TextInput style={styles.textInput} placeholder={children} />
     </View>
   );
 }
