@@ -23,7 +23,7 @@ function HomeScreen() {
             color="white"
           />
           <View style={styles.headerIcons}>
-            <Pressable>
+            <Pressable onPress={() => navigate.navigate('WhatsNewScreen')}>
               <Image source={require('../assets/icons/bell.png')} />
             </Pressable>
             <Image source={require('../assets/icons/recent.png')} />

@@ -7,7 +7,10 @@ import Metrics from '../../theme/Metrics';
 function BrowsingList() {
   renderBrowsingItems = ({item}) => (
     <View style={styles.box}>
-      <ImageBackground source={item.imageSource} style={styles.images}>
+      <ImageBackground
+        source={item.imageSource}
+        style={styles.images}
+        imageStyle={{borderRadius: Metrics.scale(8)}}>
         <View style={styles.imageText}>
           <TextComponent
             text={item.title}

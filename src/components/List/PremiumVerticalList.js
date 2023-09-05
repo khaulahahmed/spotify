@@ -7,13 +7,11 @@ import {premiumListData} from '../../data/PremiumVerticalListData';
 
 const PremiumVerticalList = () => {
   const renderPremiumList = ({item}) => {
-    // console.log(item);
     return (
       <ImageBackground
         source={item.imageSource}
         style={{
           height: Metrics.scale(230),
-          borderRadius: 10,
           margin: Metrics.scale(10),
         }}
         imageStyle={{borderRadius: 10}}>

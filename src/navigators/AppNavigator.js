@@ -5,6 +5,7 @@ import {COLORS} from '../theme/Colors';
 import BottomTabNavigator from './BottomTabNavigator';
 import LogInScreen from '../screens/LogInScreen';
 import HomeScreen from '../screens/HomeScreen';
+import WhatsNewScreen from '../screens/WhatsNewScreen';
 
 const {Navigator, Screen} = createStackNavigator();
 
@@ -52,6 +53,23 @@ const AppNavigator = () => {
         component={HomeScreen}
         options={{
           headerShown: false,
+        }}
+      />
+      <Screen
+        name="WhatsNewScreen"
+        component={WhatsNewScreen}
+        options={{
+          headerShown: true,
+          title: "What's New",
+          headerStyle: {
+            backgroundColor: 'black',
+            opacity: 0.99,
+          },
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            color: 'white',
+          },
+          headerTintColor: 'white',
         }}
       />
     </Navigator>
