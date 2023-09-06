@@ -1,6 +1,11 @@
 import React from 'react';
-import {FlatList, Image, StyleSheet, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import TextComponent from '../components/Text/TextComponent';
 import {NewSongsData} from '../data/NewSongs';
 import {COLORS} from '../theme/Colors';

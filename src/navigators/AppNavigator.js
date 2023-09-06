@@ -6,6 +6,10 @@ import BottomTabNavigator from './BottomTabNavigator';
 import LogInScreen from '../screens/LogInScreen';
 import HomeScreen from '../screens/HomeScreen';
 import WhatsNewScreen from '../screens/WhatsNewScreen';
+import Camera from '../components/camera/Camera';
+import YourLibraryScreen from '../screens/YourLibraryScreen';
+import BrowseScreens from '../screens/BrowseScreens';
+import AlbumScreens from '../screens/AlbumScreens';
 
 const {Navigator, Screen} = createStackNavigator();
 
@@ -70,6 +74,35 @@ const AppNavigator = () => {
             color: 'white',
           },
           headerTintColor: 'white',
+        }}
+      />
+      <Screen
+        name="Camera"
+        component={Camera}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Screen
+        name="LibraryScreen"
+        component={YourLibraryScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Screen
+        name="BrowseScreens"
+        component={BrowseScreens}
+        options={{
+          headerShown: true,
+        }}
+      />
+
+      <Screen
+        name="AlbumScreens"
+        component={AlbumScreens}
+        options={{
+          headerShown: true,
         }}
       />
     </Navigator>

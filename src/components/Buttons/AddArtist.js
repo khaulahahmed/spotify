@@ -1,22 +1,60 @@
-import {Pressable} from '@react-native-material/core';
 import {useNavigation} from '@react-navigation/native';
 import {React, useState} from 'react';
-import {Image, StyleSheet, View} from 'react-native';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import {
+  FlatList,
+  Image,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import Modal from 'react-native-modal';
-import Metrics from '../../theme/Metrics';
-import AddArtistModal from '../LibraryScreen/AddArtistModal';
-import TextComponent from '../Text/TextComponent';
 import {Icons} from '../../assets/icons';
+import {artistsData} from '../../data/Artists';
+import Metrics from '../../theme/Metrics';
+import TextComponent from '../Text/TextComponent';
+import TextInputComponent from '../TextInput/TextInputComponent';
 
 const AddArtist = () => {
+  // useEffect(() => {
+  // }, [selectedArtists]);
+
   const [modalVisible, setModalVisible] = useState(false);
   const navigate = useNavigation();
+  const [selectedArtists, setSelectedArtists] = useState([]);
 
-  const handleModal = () => {
-    setModalVisible(() => !modalVisible);
+  const addSelected = item => {
+    console.log('item', item);
+    setSelectedArtists(selectedArtists.concat(item));
+    console.log('array ', selectedArtists);
   };
 
+  const renderArtist = ({item}) => (
+    <Pressable
+      onPress={() => addSelected(item)}
+      style={{
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: Metrics.scale(10),
+      }}>
+      <Image
+        source={item.imageSource}
+        style={{
+          borderRadius: 250,
+          width: 100,
+          height: 100,
+          marginBottom: Metrics.scale(10),
+        }}
+      />
+      <TextComponent
+        text={item.title}
+        type="ExtraBold"
+        size={13}
+        color="white"
+      />
+    </Pressable>
+  );
   return (
     <>
       <Modal
@@ -27,18 +65,46 @@ const AddArtist = () => {
         }}>
         <View style={styles.ModalView}>
           <ScrollView>
+            {/* close button */}
             <Pressable onPress={() => setModalVisible(!modalVisible)}>
               <Image source={Icons.close} />
             </Pressable>
-            <AddArtistModal />
+            {/* close button */}
+
+            {/* ModalView */}
+            <View style={styles.header}>
+              <TextComponent
+                text={'Choose more artists you like.'}
+                type="ExtraBold"
+                size={27}
+                color="white"
+              />
+
+              <TextInputComponent children={'Search'} />
+
+              <FlatList
+                data={artistsData}
+                keyExtractor={item => item.id}
+                renderItem={renderArtist}
+                numColumns={3}
+                contentContainerStyle={{
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginVertical: Metrics.scale(20),
+                }}
+              />
+            </View>
           </ScrollView>
+
           <Pressable
-            onPress={() => setModalVisible(!modalVisible)}
+            // onPress={() => setModalVisible(false)}
             style={{
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => setModalVisible(false)}>
               <TextComponent
                 text={'Done'}
                 type="Bold"
@@ -49,7 +115,42 @@ const AddArtist = () => {
           </Pressable>
         </View>
       </Modal>
+      {/* Modal View */}
 
+      <FlatList
+        data={selectedArtists}
+        renderItem={({item}) => (
+          <>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                width: Metrics.screenWidth * 0.56,
+                justifyContent: 'space-around',
+                alignContent: 'flex-start',
+              }}>
+              <Image
+                source={item.imageSource}
+                style={{
+                  borderRadius: 250,
+                  width: 70,
+                  height: 70,
+                  marginBottom: Metrics.scale(10),
+                }}
+              />
+              <TextComponent
+                text={item.title}
+                type="ExtraBold"
+                size={13}
+                color="white"
+              />
+            </View>
+          </>
+        )}
+        keyExtractor={item => item?.id}
+      />
+
+      {/* Add Artists Button */}
       <View style={styles.box}>
         <Pressable onPress={() => setModalVisible(!modalVisible)}>
           <Image source={Icons.add} style={styles.image} />
@@ -63,6 +164,7 @@ const AddArtist = () => {
           />
         </View>
       </View>
+      {/* Add Artists Button */}
     </>
   );
 };
@@ -97,5 +199,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: Metrics.scale(30),
+  },
+  header: {
+    width: Metrics.screenWidth * 0.9,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

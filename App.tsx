@@ -1,7 +1,6 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {LogBox, StatusBar} from 'react-native';
-import BottomTabNavigator from './src/navigators/BottomTabNavigator';
-import {NavigationContainer} from '@react-navigation/native';
 import AppNavigator from './src/navigators/AppNavigator';
 
 const App = () => {

@@ -28,6 +28,7 @@ function YourLibraryScreen() {
       </View>
 
       <RecentHeading />
+
       <View style={styles.box}>
         <View style={styles.image}>
           <LinearGradient
@@ -35,9 +36,10 @@ function YourLibraryScreen() {
             start={{x: 0, y: 0}}
             end={{x: 1, y: 1}}
             style={styles.boxContainer}>
-            <Image source={Icons.favorite} />
+            <Image source={Icons?.favorite} />
           </LinearGradient>
         </View>
+
         <View style={styles.textStyles}>
           <TextComponent
             text={'Liked Songs'}

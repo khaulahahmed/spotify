@@ -1,11 +1,10 @@
 import React from 'react';
-import {FlatList, Image, ImageBackground, StyleSheet, View} from 'react-native';
-import TextComponent from '../components/Text/TextComponent';
-import Metrics from '../theme/Metrics';
-import TextInputComponent from '../components/TextInput/TextInputComponent';
-import {browsingData} from '../data/BrowsingData';
+import {StyleSheet, View} from 'react-native';
 import BrowsingList from '../components/List/BrowsingList';
-import {Icons} from '../assets/icons';
+import TextComponent from '../components/Text/TextComponent';
+import TextInputComponent from '../components/TextInput/TextInputComponent';
+import CameraIcon from '../components/camera/CameraIcon';
+import Metrics from '../theme/Metrics';
 
 const SearchScreen = () => {
   return (
@@ -17,7 +16,7 @@ const SearchScreen = () => {
           size={20}
           color="white"
         />
-        <Image source={Icons.camera2} style={styles.image} />
+        <CameraIcon />
       </View>
       <TextInputComponent children={'What do you want to listen to?'} />
       <View style={{marginHorizontal: Metrics.scale(15)}}>

@@ -1,9 +1,16 @@
 import React from 'react';
-import {FlatList, Image, StyleSheet, View, Dimensions} from 'react-native';
+import {
+  Dimensions,
+  FlatList,
+  Image,
+  LogBox,
+  StyleSheet,
+  View,
+} from 'react-native';
 import {Favorites} from '../../data/Favorites';
-import TextComponent from '../Text/TextComponent';
-import Metrics from '../../theme/Metrics';
 import {COLORS} from '../../theme/Colors';
+import Metrics from '../../theme/Metrics';
+import TextComponent from '../Text/TextComponent';
 
 function LibraryList() {
   const renderFavoriteItems = ({item}) => (
@@ -19,6 +26,10 @@ function LibraryList() {
       </View>
     </View>
   );
+
+  React.useEffect(() => {
+    LogBox.ignoreLogs(['VirtualizedLists']);
+  });
   return (
     <FlatList
       data={Favorites}

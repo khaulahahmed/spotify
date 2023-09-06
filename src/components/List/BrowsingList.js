@@ -1,12 +1,18 @@
+import {Pressable} from '@react-native-material/core';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {FlatList, ImageBackground, StyleSheet, View} from 'react-native';
 import {browsingData} from '../../data/BrowsingData';
-import TextComponent from '../Text/TextComponent';
 import Metrics from '../../theme/Metrics';
+import TextComponent from '../Text/TextComponent';
 
 function BrowsingList() {
+  const navigate = useNavigation();
+
   renderBrowsingItems = ({item}) => (
-    <View style={styles.box}>
+    <Pressable
+      onPress={() => navigate.navigate('BrowseScreens', {itemId: item.id})}
+      style={styles.box}>
       <ImageBackground
         source={item.imageSource}
         style={styles.images}
@@ -20,7 +26,7 @@ function BrowsingList() {
           />
         </View>
       </ImageBackground>
-    </View>
+    </Pressable>
   );
 
   return (

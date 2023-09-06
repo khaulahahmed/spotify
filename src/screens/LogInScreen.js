@@ -1,12 +1,12 @@
-import {StyleSheet, Text, View, Image, FlatList} from 'react-native';
-import React from 'react';
-import TextComponent from '../components/Text/TextComponent';
-import Metrics from '../theme/Metrics';
-import {COLORS} from '../theme/Colors';
-import {LoginOptionsData} from '../data/LoginOptions';
 import {Pressable} from '@react-native-material/core';
 import {useNavigation} from '@react-navigation/native';
+import React from 'react';
+import {FlatList, Image, StyleSheet, View} from 'react-native';
 import {Logo} from '../assets/logo';
+import TextComponent from '../components/Text/TextComponent';
+import {LoginOptionsData} from '../data/LoginOptions';
+import {COLORS} from '../theme/Colors';
+import Metrics from '../theme/Metrics';
 
 const LogInScreen = () => {
   const navigate = useNavigation();
@@ -48,7 +48,7 @@ const LogInScreen = () => {
         style={{flexGrow: 0, marginBottom: Metrics.scale(15)}}
         // contentContainerStyle={{height: Metrics.screenHeight * 0.3}}
       />
-      <Pressable onPress={() => navigate.navigate('HomeScreen')}>
+      <Pressable onPress={() => navigate.navigate('bottomTab')}>
         <TextComponent
           text={'Log in'}
           type="ExtraBold"

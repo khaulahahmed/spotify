@@ -1,18 +1,24 @@
-import TextComponent from '../components/Text/TextComponent';
-import {ScrollView, StyleSheet, View, Image} from 'react-native';
-import Metrics from '../theme/Metrics';
-import {Recommendations, SongData} from '../data/Recommendations';
-import FavoritesList from '../components/List/FavoritesList';
-import HorizontalList from '../components/List/HorizontalList';
-import recentlyPlayed from '../data/RecentlyPlayed';
-import {popularAlbums} from '../data/PopularAlbums';
 import {Pressable} from '@react-native-material/core';
 import {useNavigation} from '@react-navigation/native';
+import React from 'react';
+import {Image, LogBox, ScrollView, StyleSheet, View} from 'react-native';
 import {Icons} from '../assets/icons';
+import FavoritesList from '../components/List/FavoritesList';
+import HorizontalList from '../components/List/HorizontalList';
+import TextComponent from '../components/Text/TextComponent';
+import {popularAlbums} from '../data/PopularAlbums';
+import recentlyPlayed from '../data/RecentlyPlayed';
+import {Recommendations} from '../data/Recommendations';
+import Metrics from '../theme/Metrics';
 
 function HomeScreen() {
   const userName = 'Khaulah Ahmed ';
   const navigate = useNavigation();
+
+  React.useEffect(() => {
+    LogBox.ignoreLogs(['VirtualizedLists']);
+  });
+
   return (
     <ScrollView>
       <View style={styles.rootContainer}>

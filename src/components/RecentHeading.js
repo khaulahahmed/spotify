@@ -7,7 +7,7 @@ import {Icons} from '../assets/icons';
 function RecentHeading() {
   return (
     <View style={styles.subheadingContainer}>
-      <Image source={Icons.recents} style={styles.recentsIcon} />
+      <Image source={Icons?.recents} style={styles.recentsIcon} />
       <TextComponent
         text={'Recents'}
         type="ExtraBold"
@@ -15,7 +15,7 @@ function RecentHeading() {
         color="white"
       />
       <View style={styles.thumbnail}>
-        <Image source={Icons.thumbnail} style={styles.thumbnailIcon} />
+        <Image source={Icons?.thumbnail} style={styles.thumbnailIcon} />
       </View>
     </View>
   );

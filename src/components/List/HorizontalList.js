@@ -9,10 +9,15 @@ import {
 } from 'react-native';
 import TextComponent from '../Text/TextComponent';
 import Metrics from '../../theme/Metrics';
+import {useNavigation} from '@react-navigation/native';
+import {Pressable} from '@react-native-material/core';
 
 const HorizontalList = ({data}) => {
+  const navigate = useNavigation();
   renderRecommendedItems = ({item}) => (
-    <View style={styles.dataBox}>
+    <Pressable
+      onPress={() => navigate.navigate('AlbumScreens', {itemId: item.id})}
+      style={styles.dataBox}>
       <Image source={item.imageSource} style={styles.dataImage} />
       <View>
         <TextComponent
@@ -36,7 +41,7 @@ const HorizontalList = ({data}) => {
           />
         </View>
       </View>
-    </View>
+    </Pressable>
   );
 
   return (
